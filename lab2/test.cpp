@@ -3,20 +3,8 @@
 #include <cxxabi.h> // для GCC/Clang
 #include <typeinfo>
 
-// Функция для демангла имени типа
+// Функция для вывода полного имени типа. Найдено на просторах stackoverflow.
 // Чёрный ящик! НЕ СМОТРЕТЬ
-// std::string demangle(const char* mangled) {
-//     int status = 0;
-//     char* demangled = abi::__cxa_demangle(mangled, nullptr, nullptr, &status);
-//     if (status == 0 && demangled) {
-//         std::string result(demangled);
-//         free(demangled);
-//         return result;
-//     }
-//     return mangled;
-// }
-
-
 /**
  * Функция для преобразования "mangled" (искаженного) имени типа в читаемое
  * Mangled имена используются компилятором для внутреннего представления типов
